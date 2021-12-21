@@ -19,6 +19,8 @@ func main() {
 		panic(err)
 	}
 
+	println("Server listening: " + listen)
+
 	// http.ListenAndServe(listen, http.FileServer(http.FS(fsys)))
 	http.ListenAndServe(listen, gziphandler.GzipHandler(http.FileServer(http.FS(fsys))))
 }
