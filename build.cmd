@@ -12,7 +12,7 @@ cd ..
 
 
 copy html\*.html dist > nul
-copy html\*.js dist > nul
+copy %GOROOT%\misc\wasm\wasm_exec.js dist > nul
 
 
 set GOOS=%GOOS_ORIG%
